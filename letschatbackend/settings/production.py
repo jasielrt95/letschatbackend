@@ -114,6 +114,8 @@ AUTH_PASSWORD_VALIDATORS = [
 
 CORS_ALLOWED_ORIGINS = [
     f"http://{os.getenv('SERVER_IP')}",
+    f"http://{os.getenv('SERVER_DOMAIN')}",
+    f"https://{os.getenv('SERVER_DOMAIN')}",
     os.getenv("SERVER_DOMAIN"),
 ]
 
