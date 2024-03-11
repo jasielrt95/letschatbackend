@@ -97,7 +97,6 @@ DATABASES = {
 }
 
 
-
 AUTH_PASSWORD_VALIDATORS = [
     {
         "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
@@ -114,25 +113,8 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",
-    "http://127.0.0.1:5173",
-    "http://0.0.0.0:5173",
-    "http://localhost:8000",
-    "http://127.0.0.1:8000",
-    "http://0.0.0.0:8000",
-    "http://localhost:80",
-    "http://127.0.0.1:80",
-    "http://0.0.0.0:80",
-    "https://localhost:80",
-    "https://127.0.0.1:80",
-    "https://0.0.0.0:80",
-    "https://localhost:8000",
-    "https://127.0.0.1:8000",
-    "https://0.0.0.0:8000",
-    "https://localhost:5173",
-    "https://127.0.0.1:5173",
-    "https://0.0.0.0:5173",
-    "https://localhost:8080",
+    f"http://{os.getenv('SERVER_IP')}",
+    os.getenv("SERVER_DOMAIN"),
 ]
 
 
